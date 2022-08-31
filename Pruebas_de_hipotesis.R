@@ -1,20 +1,17 @@
-#ADA 11
-#Calificacion 1.9 pts. 
-
-#Pruebas de hip髏esis para la media de muestras grandes
-#1. Crea una funci髇 que se llame pruebahipm que
-#calcule pruebas de hip髏esis para muestras 
-#grandes, los argumentos de la funci髇 deben de ser: 
+#Pruebas de hip贸tesis para la media de muestras grandes
+#1. Crea una funci贸n que se llame pruebahipm que
+#calcule pruebas de hip贸tesis para muestras 
+#grandes, los argumentos de la funci贸n deben de ser: 
 #x: el conjunto de observaciones 
-#h0: el valor propuesto de la hip髏esis nula 
+#h0: el valor propuesto de la hip贸tesis nula 
 #h1: cadena de texto que tome los valores sup, inf, dos, para indicar 
 #que se trata de una prueba de la cola superior, inferior o de dos colas,
 #respectivamente (por defecto "dos")
 #alpha: el nivel de significacia de la prueba (por defecto 0.05)
 #el resultado, debe de ser una lista que te de
-#en su primer componente el estad韘tico de prueba, la segunda la regi髇
+#en su primer componente el estad铆stico de prueba, la segunda la regi贸n
 #de rechazo y la tercer si se rechaza o no H0. 
-#Nota: Usar 4 decimales en el estad韘tico de prueba y  region de rechazo 
+#Nota: Usar 4 decimales en el estad铆stico de prueba y  region de rechazo 
 pruebahipm1<-function(x, h0, h1="dos", significancia=0.05){
   muestra<-x
   rr<-numeric()
@@ -59,22 +56,22 @@ pruebahipm1<-function(x, h0, h1="dos", significancia=0.05){
   
 }
 
-#0.5 pts.
 
-#Pruebas de hip髏esis para la proporcion de muestras grandes
-#2. Crea una funci髇 que se llame pruebahipp que
-#calcule pruebas de hip髏esis para muestras 
-#grandes, los argumentos de la funci髇 deben de ser: 
+
+#Pruebas de hip贸tesis para la proporcion de muestras grandes
+#2. Crea una funci贸n que se llame pruebahipp que
+#calcule pruebas de hip贸tesis para muestras 
+#grandes, los argumentos de la funci贸n deben de ser: 
 #x: el conjunto de observaciones 
-#h0: el valor propuesto de la hip髏esis nula 
+#h0: el valor propuesto de la hip贸tesis nula 
 #h1: cadena de texto que tome los valores sup, inf, dos, para indicar 
 #que se trata de una prueba de la cola superior, inferior o de dos colas,
 #respectivamente (por defecto "dos")
 #alpha: el nivel de significacia de la prueba (por defecto 0.05)
 #el resultado, debe de ser una lista que te de
-#en su primer componente el estad韘tico de prueba, la segunda la regi髇
+#en su primer componente el estad铆stico de prueba, la segunda la regi贸n
 #de rechazo y la tercer si se rechaza o no H0. 
-#Nota: Usar 4 decimales en el estad韘tico de prueba y  region de rechazo 
+#Nota: Usar 4 decimales en el estad铆stico de prueba y  region de rechazo 
 pruebahipp1<-function(x, h0, h1="dos", significancia=0.05){
   muestra<-x
   rr<-numeric()
@@ -119,25 +116,23 @@ pruebahipp1<-function(x, h0, h1="dos", significancia=0.05){
   return(final)
   
 }
-#0.5 pts.
 
 
-##Pruebas de hip髏esis para la proporcion de muestras grandes
-#3. Crea una funci髇 que se llame pruebahip que
-#calcule pruebas de hip髏esis para muestras 
-#grandes, los argumentos de la funci髇 deben de ser: 
+##Pruebas de hip贸tesis para la proporcion de muestras grandes
+#3. Crea una funci贸n que se llame pruebahip que
+#calcule pruebas de hip贸tesis para muestras 
+#grandes, los argumentos de la funci贸n deben de ser: 
 #x: el conjunto de observaciones de la poblacion 1
 #y: el conjunto de observaciones de la poblacion 2
-#h0: el valor propuesto de la hip髏esis nula (D0) 
+#h0: el valor propuesto de la hip贸tesis nula (D0) 
 #h1: cadena de texto que tome los valores sup, inf, dos, para indicar 
 #que se trata de una prueba de la cola superior, inferior o de dos colas,
 #respectivamente (por defecto "dos")
 #alpha: el nivel de significacia de la prueba (por defecto 0.05)
 #el resultado, debe de ser una lista que te de
-#en su primer componente el estad韘tico de prueba, la segunda la regi髇
+#en su primer componente el estad铆stico de prueba, la segunda la regi贸n
 #de rechazo y la tercer si se rechaza o no H0. 
-#Nota: Usar 4 decimales en el estad韘tico de prueba y  region de rechazo 
-#0.5 pts.
+#Nota: Usar 4 decimales en el estad铆stico de prueba y  region de rechazo 
 pruebadif1<-function(x, y, h0, h1="dos", significancia=0.05){
   muestra<-x
   rr<-numeric()
@@ -184,18 +179,19 @@ pruebadif1<-function(x, y, h0, h1="dos", significancia=0.05){
   return(final)
   
 } 
-#0.5 pts.
 
-#4. Escribir una funci髇, que reciba 2 o 3 argumentos, que sean los siguientes: 
+
+
+#4. Escribir una funci贸n, que reciba 2 o 3 argumentos, que sean los siguientes: 
 #conf= 0.95: indica el nivel de confianza 
 #x: un vector de datos x
 #y: un vector de datos y 
-#La funci髇 debe de hacer lo siguiente: si solo se le ingresa conf  y x 
+#La funci贸n debe de hacer lo siguiente: si solo se le ingresa conf  y x 
 #entonces calcula el estimador de la media y calcula el intervalo de confianza 
 #de la media, si la funcion recibe conf, x e y, entonces calcula el estimador 
 #de la diferencia de medias y el intervalo de confianza de la diferencia de 
 #medias, en ambos casos, con el nivel de confianza ingresado en conf (por defecto 95%)
-#en caso de que se ingrese solo un vector, la funci髇 debe de regresar una lista con 2 componentes, la componente uno 
+#en caso de que se ingrese solo un vector, la funci贸n debe de regresar una lista con 2 componentes, la componente uno 
 #se debe de llamar estimador y debe de tener la frase: "El estimador de la media es: X"
 #la componente 2 se debe de llamar intervalo y debe de tener la frase:
 #"El intervalo de X% de confianza es: (X1,X2)", en caso de que se ingresen 2 vectores
@@ -233,4 +229,3 @@ intervalomedia1<-function(conf=0.95,x, y=NULL){
 }
 
 #Los intervalos salen al revez,primero el superior y luego el inferior 
-#0.4 pts
