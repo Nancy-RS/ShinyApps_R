@@ -11,16 +11,6 @@
 #el precio de apertura. 
 
 
-
-
-
-
-
-
-
-
-
-
 library("shiny")
 library("smooth")
 
