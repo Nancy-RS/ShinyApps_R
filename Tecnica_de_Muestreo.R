@@ -1,5 +1,4 @@
-#ADA 12
-#Técnicas de muestreo 
+#TÃ©cnicas de muestreo 
 
 #Bases de entrada
 #ejemplo 1
